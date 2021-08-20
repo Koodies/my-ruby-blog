@@ -8,3 +8,8 @@ class CreateArticles < ActiveRecord::Migration[6.1]
     end
   end
 end
+
+# Model to interact with database
+# $ bin/rails console
+# > article = Article.new(title: "Hello Rails", body: "I am on Rails!")
+# > article.save
