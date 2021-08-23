@@ -37,7 +37,7 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article = Article.find(params[:id])
-    @comments = Comment.where("article_id"=>params[:id])
+    @comments = @article.comments
     @comments.destroy_all
     @article.destroy
 
